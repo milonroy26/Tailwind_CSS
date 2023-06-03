@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="./output.css">
+</head>
+<body class="bg-gray-800 flex items-center justify-center flex-col p-4">
+
+    <div class="max-w-sm mx-auto p-6 flex items-center justify-center space-x-4 bg-gray-100 shadow-md rounded-md">
+        <img class="w-24 rounded-full ring ring-teal-700" src="me.jpg" alt="">
+        <div class="space-y-1">
+            <div>
+                <p class="text-xl font-semibold text-black">Erin Lindford</p>
+                <p class="text-md font-medium text-gray-600">Web Designer</p>
+            </div>
+            <button class=" py-1 px-4 rounded-full text-white text-sm bg-purple-600 hover:bg-purple-700 dark:md:hover:bg-fuchsia-600">Message</button>
+        </div>
+    </div>
+
+    <!-- 
+    Pseudo-classes 
+    ​Hover, focus, and active
+    -->
+    <div class="py-5 space-y-3">
+        <h1 class="text-white">​Hover, focus, and active</h1>
+        <button class="py-1 px-4 text-white rounded-md bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Save change</button>
+    </div>
+
+    <!-- First, last, odd, and even-->
+    <div class="bg-gray-100 p-4 rounded-sm">
+        <h1 class="text-center text-red-700">First, last, odd, and even</h1>
+        <ul role="list" class="p-6 flex">
+            <!-- Remove top/bottom padding when first/last child -->
+            <li class="flex py-4 first:pt-0 last:pb-0">
+            <img class="h-16 w-16 rounded-full" src="me.jpg" alt="" />
+            <div class="ml-3 mt-3 overflow-hidden">
+                <p class="text-sm font-medium text-slate-900">Milon Chandro</p>
+                <p class="text-sm text-slate-500 truncate">Milon@gmail.com</p>
+            </div>
+            </li>
+        </ul>
+    </div>
+
+     <!--using the odd and even modifiers-->
+     <div class="bg-gray-100 rounded-sm mt-6 p-2">
+        <h1 class="text-center text-red-700">using the odd and even modifiers</h1>
+        <table>
+            <tbody>
+                <!-- Use a white background for odd rows, and slate-50 for even rows -->
+                <tr class="odd:bg-red-500 even:bg-slate-50">
+                  <td>Name</td>
+                  <td>Id</td>
+                  <td>Email</td>
+                </tr>
+                <tr class="odd:bg-red-500 even:bg-slate-50">
+                    <td>Name</td>
+                    <td>Id</td>
+                    <td>Email</td>
+                  </tr>
+                  <tr class="odd:bg-red-500 even:bg-slate-50">
+                    <td>Name</td>
+                    <td>Id</td>
+                    <td>Email</td>
+                  </tr>
+            </tbody>
+          </table>
+    </div>
+
+    <!--  required, invalid, and disabled: -->
+    <form class="bg-gray-200 p-4 mt-4 rounded-sm space-y-2">
+        <h1 class="text-red-500">Using form state modifiers, the classes can be identical for every input</h1>
+        <label class="block">
+          <span class="block text-sm font-medium text-slate-700">Username</span>
+          <!-- Using form state modifiers, the classes can be identical for every input -->
+          <input type="text" disabled class="mt-1 block w-full  px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-300
+            focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+            disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+            invalid:border-pink-500 invalid:text-pink-600
+            focus:invalid:border-pink-500 focus:invalid:ring-pink-500
+          "/>
+        </label>
+        
+        <label class="block">Email:
+            <input class="block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-500 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500" type="email" placeholder="demo@gmail.com">
+        </label>
+        
+    </form>
+
+    <!-- Hover over the card to see both text elements change color-->
+    <div class="group max-w-xs mx-auto rounded-lg p-6 bg-white ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 mt-4 mb-4">
+        <p class="text-red-700 group-hover:text-purple-700 text-center">Hover over the card to see both text elements change colo</p>
+        <div class="flex items-center space-x-3">
+          <img class="w-6 h-6 rounded-full" src="me.jpg" alt="">
+          <h3 class="text-slate-900 group-hover:text-white text-sm font-semibold">New project</h3>
+        </div>
+        <p class="text-slate-500 group-hover:text-white text-sm">Create a new project from a variety of starting templates.</p>
+    </div>
+
+    <!-- modifiers using classes like group-hover/{name} -->
+-   <ul role="list" class="border p-3 bg-slate-200 w-80">
+        <p class="text-center mb-2 text-red-700">modifiers using classes like group-hover</p>
+        <li class="group/item hover:bg-slate-300 rounded-sm flex items-center space-x-3 p-2">
+        <img class="w-14 h-14 rounded-full" src="me.jpg" alt="" />
+        <div>
+            <a href="#">Milon Chandro</a>
+            <p class="text-sm">Web Designer</p>
+        </div>
+        <a class="group/edit invisible hover:bg-slate-200 group-hover/item:visible" href="#">
+            <span class="group-hover/edit:text-gray-700 ...">Call</span>
+        </a>
+        </li>
+        <li class="group/item hover:bg-slate-300 rounded-sm flex items-center space-x-3 p-2">
+            <img class="w-14 h-14 rounded-full" src="me.jpg" alt="" />
+            <div>
+                <a href="#">Milon Chandro</a>
+                <p class="text-sm">Web Designer</p>
+            </div>
+            <a class="group/edit invisible hover:bg-slate-200 group-hover/item:visible" href="#">
+                <span class="group-hover/edit:text-gray-700 ...">Call</span>
+            </a>
+        </li>
+    </ul>
+
+    <!-- Styling based on sibling state -->
+    <form class="bg-slate-200 p-3 rounded-sm mt-4">
+        <label class="block space-y-2">
+          <span class="block text-sm font-medium text-slate-700">Email</span>
+          <input placeholder="email" type="email" class="peer px-1 py-2 rounded-sm w-full"/>
+          <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm block">
+            Please provide a valid email address.
+          </p>
+        </label>
+    </form>
+-
+</body>
+</html>
